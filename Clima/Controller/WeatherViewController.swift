@@ -30,7 +30,9 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, WeatherManag
     
     
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
-        print(weather.temperature)
+        DispatchQueue.main.async {
+            self.temperatureLabel.text = weather.temperatureString
+        }
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
