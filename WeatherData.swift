@@ -2,11 +2,7 @@
 //  WeatherData.swift
 //  Clima
 //
-<<<<<<< HEAD
 //  Created by Joel Espinal (ClaroDom) on 15/9/23.
-=======
-//  Created by Joel Espinal (JoelEspinal) on 15/9/23.
->>>>>>> 718c452cf8bcba4f5c734ca28f2f8092548104ff
 //  Copyright © 2023 App Brewery. All rights reserved.
 //
 

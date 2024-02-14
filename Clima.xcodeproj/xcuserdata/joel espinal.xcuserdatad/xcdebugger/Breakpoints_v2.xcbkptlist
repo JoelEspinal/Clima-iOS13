@@ -8,14 +8,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "0AF62430-5624-4D91-A05F-F82234D6F525"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeatherManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "performRequest(with:)"
             landmarkType = "7">
             <Locations>
@@ -48,54 +48,6 @@
                   startingLineNumber = "37"
                   endingLineNumber = "37"
                   offsetFromSymbolStart = "756">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BD5CB3DF-3FAE-4681-AE51-FB25868AD0D4"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Clima/Controller/WeatherViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "didUpdateWeather(_:weather:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "BD5CB3DF-3FAE-4681-AE51-FB25868AD0D4 - 5d1ea9de8a3c7edf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Clima.WeatherViewController.didUpdateWeather(weather: Clima.WeatherModel) -&gt; ()"
-                  moduleName = "Clima"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/joel%20espinal/development/JoelEspinal/ios/Clima-iOS13/Clima/Controller/WeatherViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "168">
-               </Location>
-               <Location
-                  uuid = "BD5CB3DF-3FAE-4681-AE51-FB25868AD0D4 - 5d1ea9de8a3c7edf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Clima.WeatherViewController.didUpdateWeather(weather: Clima.WeatherModel) -&gt; ()"
-                  moduleName = "Clima"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/joel%20espinal/development/JoelEspinal/ios/Clima-iOS13/Clima/Controller/WeatherViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "104">
                </Location>
             </Locations>
          </BreakpointContent>
