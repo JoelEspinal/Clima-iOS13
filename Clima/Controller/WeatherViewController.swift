@@ -27,17 +27,19 @@ class WeatherViewController: UIViewController {
         weatherManager.delegate = self
         
         let status: CLAuthorizationStatus = locationnManager.authorizationStatus
-        if status == .notDetermined {
+        if status == .notDetermined || status == .denied || status == .restricted{
             // Ask permissions
             locationnManager.requestWhenInUseAuthorization()
             locationnManager.requestAlwaysAuthorization()
             
-        } else if status == .authorizedWhenInUse || status == .authorizedAlways{
+        } else if status == .authorizedWhenInUse || status == .authorizedAlways {
             locationnManager.requestLocation()
         }
     }
 
     @IBAction func searchPressed(_ sender: UIButton) {
+        
+        locationnManager.requestLocation()
         searchTextField.endEditing(true)
     }
 }
