@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 
 class WeatherViewController: UIViewController {
-
+    
     @IBOutlet weak var conditionImageView: UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
@@ -26,6 +26,19 @@ class WeatherViewController: UIViewController {
         searchTextField.delegate = self
         weatherManager.delegate = self
         
+        requestLocation()
+    }
+    
+    @IBAction func searchPressed(_ sender: UIButton) {
+        locationnManager.requestLocation()
+        searchTextField.endEditing(true)
+    }
+    
+    @IBAction func locationButton(_ sender: UIButton) {
+        requestLocation()
+    }
+    
+    func requestLocation() -> Void {
         let status: CLAuthorizationStatus = locationnManager.authorizationStatus
         if status == .notDetermined || status == .denied || status == .restricted{
             // Ask permissions
@@ -35,12 +48,6 @@ class WeatherViewController: UIViewController {
         } else if status == .authorizedWhenInUse || status == .authorizedAlways {
             locationnManager.requestLocation()
         }
-    }
-
-    @IBAction func searchPressed(_ sender: UIButton) {
-        
-        locationnManager.requestLocation()
-        searchTextField.endEditing(true)
     }
 }
 
@@ -89,13 +96,10 @@ extension WeatherViewController: WeatherManagerDelegate {
 // MARK - CLLocationManagerDelegate
 extension WeatherViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("Got location Data!!")
         if let location = locations.last {
             let lat = location.coordinate.latitude
             let lon = location.coordinate.longitude
-            
-            print(lat)
-            print(lon)
+            self.weatherManager.fetchWeather(latitude: lat, longitute: lon)
         }
     }
     
@@ -104,3 +108,4 @@ extension WeatherViewController: CLLocationManagerDelegate {
         print(error)
     }
 }
+
